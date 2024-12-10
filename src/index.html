@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="./javascript/index.js"></script>
-    
+    <style>
+        table,table *{
+            border: 1px solid black;
+        }
+    </style>
     <title>Mi pagina</title>
 </head>
 <body>
     <div class="maestro">
+        <h1>Maestro</h1>
         <table>
             <thead>
                 <th>Nombre</th>
@@ -19,6 +24,24 @@
 
             </tbody>
         </table>
+    </div>
+    <h1>Detalle</h1>
+    <div class="detalle">
+        <form>
+            
+            <label for="nombre">Nombre: </label><br>
+            <input type="text" id="nombre" name="nombre"><br>
+            <label for="apellidos">Apellidos: </label><br>
+            <input type="text" id="apellidos" name="apellidos"><br>
+            <label for="edad">Edad: </label><br>
+            <input type="text" id="edad" name="edad"><br>
+            <label for="direccion">Direccion: </label><br>
+            <input type="text" id="direccion" name="direccion"><br>
+            <label for="profesion">Profesion: </label><br>
+            <input type="text" id="profesion" name="profesion"><br>
+            <label for="correo">Correo: </label><br>
+            <input type="text" id="correo" name="correo"><br>
+        </form>
     </div>
 </body>
 </html>
