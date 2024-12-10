@@ -1,0 +1,94 @@
+{
+    "solicitudes": [
+        {
+            "id": 1,
+            "nombre": "Jose",
+            "apellidos": "Calatayud Ruiz",
+            "edad": 34,
+            "direccion": "Calle Mayor 123, Madrid",
+            "profesion": "Ingeniero de software",
+            "correo": "jose.calatayud@example.com"
+        },
+        {
+            "id": 2,
+            "nombre": "Roque",
+            "apellidos": "Calatayud Marcos",
+            "edad": 100,
+            "direccion": "Avenida Libertad 45, Barcelona",
+            "profesion": "Jugador de futbol",
+            "correo": "roque.calatayud@example.com"
+        },
+        {
+            "id": 3,
+            "nombre": "Vanessa",
+            "apellidos": "Marcos Mosquera",
+            "edad": 29,
+            "direccion": "Calle Falsa 456, Valencia",
+            "profesion": "Médica",
+            "correo": "vanessa.marcos@example.com"
+        },
+        {
+            "id": 4,
+            "nombre": "Sandra",
+            "apellidos": "Marcos Mosquera",
+            "edad": 32,
+            "direccion": "Calle Sol 78, Sevilla",
+            "profesion": "Arquitecta",
+            "correo": "sandra.marcos@example.com"
+        },
+        {
+            "id": 5,
+            "nombre": "Nacho",
+            "apellidos": "Calvo Vega",
+            "edad": 40,
+            "direccion": "Plaza Mayor 90, Bilbao",
+            "profesion": "Abogado",
+            "correo": "nacho.calvo@example.com"
+        },
+        {
+            "id": 6,
+            "nombre": "Rosa",
+            "apellidos": "Mosquera Azcona",
+            "edad": 36,
+            "direccion": "Calle Luna 23, Zaragoza",
+            "profesion": "Contadora",
+            "correo": "rosa.mosquera@example.com"
+        },
+        {
+            "id": 7,
+            "nombre": "Amparo",
+            "apellidos": "Ruiz Gutierrez",
+            "edad": 45,
+            "direccion": "Calle Río 12, Salamanca",
+            "profesion": "Profesora",
+            "correo": "amparo.ruiz@example.com"
+        },
+        {
+            "id": 8,
+            "nombre": "Fernando",
+            "apellidos": "Calvo Marcos",
+            "edad": 28,
+            "direccion": "Avenida Paz 67, Málaga",
+            "profesion": "Diseñador gráfico",
+            "correo": "fernando.calvo@example.com"
+        },
+        {
+            "id": 9,
+            "nombre": "Lucia",
+            "apellidos": "Calatayud Ruiz",
+            "edad": 22,
+            "direccion": "Calle Verde 89, Granada",
+            "profesion": "Estudiante de arte",
+            "correo": "lucia.calatayud@example.com"
+        },
+        {
+            "id": 10,
+            "nombre": "Jose",
+            "apellidos": "Calatayud Marcos",
+            "edad": 38,
+            "direccion": "Calle Roble 100, Valencia",
+            "profesion": "Analista de datos",
+            "correo": "jose.marcos@example.com"
+        }
+    ]
+}
