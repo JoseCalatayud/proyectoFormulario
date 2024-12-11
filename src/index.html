@@ -25,13 +25,14 @@
                 <th>Accion</th>
                 <!--Buscar toast de jquery para el teme de mientras cargas la informacion-->
             </thead>
+            
             <tbody>
-
+                <span id="cargando"></span>
             </tbody>
         </table>
     </div>
-    <h1>Detalle</h1>
     <div id="detalle">
+        <h1>Detalle</h1>
         <form method="post">
             <input type="hidden" id="id" value="">
             <label for="nombre">Nombre: </label><br>
@@ -47,6 +48,7 @@
             <label for="correo">Correo: </label><br>
             <input type="text" id="correo" name="correo"><br>
             <button type="submit">Guardar</button>
+            
         </form>
     </div>
 </body>

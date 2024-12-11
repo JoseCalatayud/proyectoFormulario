@@ -1,8 +1,8 @@
 
-
 $(function () {
   function listar() {
-    $('tbody').empty()
+    $('tbody').empty();
+    
     $.get("https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes", function (data) {
       console.log(data);
       data.forEach(element => {
@@ -10,16 +10,19 @@ $(function () {
           .append($('<td>').attr('data-id', element.id).text(element.nombre))
           .append($('<td>').attr('data-id', element.id).text(element.apellidos))
           .append($('<td>').attr('data-id', element.id)
-            .append($('<button>').attr('class', 'borrar').attr('data-id', element.id).text('Borrar'))
-            .on('click', function (event) {
-              event.stopPropagation()
-              borrarentrada($(this).attr('data-id'))
-            })
-          ))
+            .append($('<button>').attr('class', 'borrar').attr('data-id', element.id).text('Borrar'))            
+          ));
       });
-    })
-
-
+    }).done(()=>{
+      $('#cargando').hide()
+      $('td button').on('click', function (event) {
+        event.stopPropagation();  // Evitar que el clic se propague a elementos padres
+        borrarentrada($(this).attr('data-id'));  // Llamar a la función de borrar
+      })
+      mostrarDetalle();
+      $('#detalle').hide();
+      
+    });
   }
   function listarPorID(id) {
     $.get(`https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes/${id}`, function (data) {
@@ -38,18 +41,23 @@ $(function () {
     $.ajax({
       url: `https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes/${id}`,
       type: 'DELETE',
-      success: () => alert('Borrado')
+      success: () => console.log('Borrado')
     })
+    $('#detalle').hide();
+
   }
-  function crear() {
-    $('#botonCrear').on('click', () => {
-      $('#id').val('0');
+  function vaciarCampos(){
+    $('#id').val('0');
       $('#nombre').val('');
       $('#apellidos').val('');
       $('#edad').val('');
       $('#direccion').val('');
       $('#profesion').val('');
       $('#correo').val('');
+  }
+  function crear() {
+    $('#botonCrear').on('click', () => {
+      vaciarCampos();
       $('#detalle').show()
     })
   }
@@ -73,8 +81,24 @@ $(function () {
           console.log(error.statusText)
       })
   }
+  function modificar(id, datos) {
+    $.ajax({
+      url: `https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes/${id}`,
+      type: "PUT", // Método HTTP
+      data: JSON.stringify(datos), // Envía el JSON plano
+      contentType: "application/json" // Especifica que el contenido es JSON  
+    }).then(
+      (response) => {
+          console.log(response)
+      },
+      (error) => {
+          
+          console.log(error.statusText)
+      })
+  }
   function guardar() {
     $('form').on('submit', (event) => {
+      event.preventDefault()
       let id = $('#id').val();
       let nombre = $('#nombre').val()
       let apellidos = $('#apellidos').val();
@@ -91,19 +115,24 @@ $(function () {
         "profesion": profesion,
         "correo": correo
       }
-      if (id <= 0) {
-        modificar(datos);
-        event.preventDefault()
+      if (id <= 0) {        
+        grabarDatos(datos);
       } else {
-        grabarDatos(datos)
+        modificar(id, datos)
       }
     })
   }
 
-  $('#detalle').hide();
+  function refrescar(){
+    $('#botonRefrescar').on('click', () => {
+      listar()      
+      $('#detalle').hide();
+      vaciarCampos();
+    })
+  }
+  refrescar()
   crear();
-  listar();
-  setTimeout(mostrarDetalle, 2000)
+  listar();  
   guardar()
 
 

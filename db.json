@@ -2,93 +2,93 @@
     "solicitudes": [
         {
             "id": 1,
-            "nombre": "Jose",
-            "apellidos": "Calatayud Ruiz",
-            "edad": 34,
-            "direccion": "Calle Mayor 123, Madrid",
-            "profesion": "Ingeniero de software",
-            "correo": "jose.calatayud@example.com"
+            "nombre": "Carlos",
+            "apellidos": "González Pérez",
+            "edad": 28,
+            "direccion": "Calle Mar 12, Madrid",
+            "profesion": "Diseñador gráfico",
+            "correo": "carlos.gonzalez@example.com"
         },
         {
             "id": 2,
-            "nombre": "Roque",
-            "apellidos": "Calatayud Marcos",
-            "edad": 100,
-            "direccion": "Avenida Libertad 45, Barcelona",
-            "profesion": "Jugador de futbol",
-            "correo": "roque.calatayud@example.com"
+            "nombre": "Elena",
+            "apellidos": "Martínez Ruiz",
+            "edad": 45,
+            "direccion": "Avenida Norte 89, Barcelona",
+            "profesion": "Médica",
+            "correo": "elena.martinez@example.com"
         },
         {
             "id": 3,
-            "nombre": "Vanessa",
-            "apellidos": "Marcos Mosquera",
-            "edad": 29,
-            "direccion": "Calle Falsa 456, Valencia",
-            "profesion": "Médica",
-            "correo": "vanessa.marcos@example.com"
+            "nombre": "Raúl",
+            "apellidos": "Fernández López",
+            "edad": 34,
+            "direccion": "Calle Sol 23, Valencia",
+            "profesion": "Abogado",
+            "correo": "raul.fernandez@example.com"
         },
         {
             "id": 4,
-            "nombre": "Sandra",
-            "apellidos": "Marcos Mosquera",
-            "edad": 32,
-            "direccion": "Calle Sol 78, Sevilla",
-            "profesion": "Arquitecta",
-            "correo": "sandra.marcos@example.com"
+            "nombre": "Sofía",
+            "apellidos": "Ruiz Sánchez",
+            "edad": 29,
+            "direccion": "Calle Luna 78, Sevilla",
+            "profesion": "Ingeniera civil",
+            "correo": "sofia.ruiz@example.com"
         },
         {
             "id": 5,
-            "nombre": "Nacho",
-            "apellidos": "Calvo Vega",
+            "nombre": "David",
+            "apellidos": "Pérez Martínez",
             "edad": 40,
-            "direccion": "Plaza Mayor 90, Bilbao",
-            "profesion": "Abogado",
-            "correo": "nacho.calvo@example.com"
+            "direccion": "Plaza Mayor 50, Bilbao",
+            "profesion": "Chef",
+            "correo": "david.perez@example.com"
         },
         {
             "id": 6,
-            "nombre": "Rosa",
-            "apellidos": "Mosquera Azcona",
-            "edad": 36,
-            "direccion": "Calle Luna 23, Zaragoza",
-            "profesion": "Contadora",
-            "correo": "rosa.mosquera@example.com"
+            "nombre": "Marta",
+            "apellidos": "González Morales",
+            "edad": 33,
+            "direccion": "Calle Esperanza 120, Zaragoza",
+            "profesion": "Psicóloga",
+            "correo": "marta.gonzalez@example.com"
         },
         {
             "id": 7,
-            "nombre": "Amparo",
-            "apellidos": "Ruiz Gutierrez",
-            "edad": 45,
-            "direccion": "Calle Río 12, Salamanca",
-            "profesion": "Profesora",
-            "correo": "amparo.ruiz@example.com"
+            "nombre": "Antonio",
+            "apellidos": "Jiménez López",
+            "edad": 38,
+            "direccion": "Avenida Libertad 56, Salamanca",
+            "profesion": "Profesor",
+            "correo": "antonio.jimenez@example.com"
         },
         {
             "id": 8,
-            "nombre": "Fernando",
-            "apellidos": "Calvo Marcos",
-            "edad": 28,
-            "direccion": "Avenida Paz 67, Málaga",
-            "profesion": "Diseñador gráfico",
-            "correo": "fernando.calvo@example.com"
+            "nombre": "Patricia",
+            "apellidos": "Martín Sánchez",
+            "edad": 26,
+            "direccion": "Calle Río 21, Málaga",
+            "profesion": "Fotógrafa",
+            "correo": "patricia.martin@example.com"
         },
         {
             "id": 9,
-            "nombre": "Lucia",
-            "apellidos": "Calatayud Ruiz",
+            "nombre": "Andrés",
+            "apellidos": "Sánchez López",
             "edad": 22,
-            "direccion": "Calle Verde 89, Granada",
-            "profesion": "Estudiante de arte",
-            "correo": "lucia.calatayud@example.com"
+            "direccion": "Calle Falsa 32, Granada",
+            "profesion": "Estudiante de ingeniería",
+            "correo": "andres.sanchez@example.com"
         },
         {
             "id": 10,
-            "nombre": "Jose",
-            "apellidos": "Calatayud Marcos",
-            "edad": 38,
-            "direccion": "Calle Roble 100, Valencia",
-            "profesion": "Analista de datos",
-            "correo": "jose.marcos@example.com"
+            "nombre": "Laura",
+            "apellidos": "Fernández García",
+            "edad": 31,
+            "direccion": "Calle Roble 101, Valencia",
+            "profesion": "Consultora de negocios",
+            "correo": "laura.fernandez@example.com"
         }
     ]
 }
