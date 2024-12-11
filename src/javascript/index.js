@@ -2,18 +2,18 @@
 $(function () {
   function listar() {
     $('tbody').empty();
-    
+
     $.get("https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes", function (data) {
       console.log(data);
       data.forEach(element => {
         $('tbody').append($('<tr>')
           .append($('<td>').attr('data-id', element.id).text(element.nombre))
           .append($('<td>').attr('data-id', element.id).text(element.apellidos))
-          .append($('<td>').attr('data-id', element.id)
-            .append($('<button>').attr('class', 'borrar').attr('data-id', element.id).text('Borrar'))            
+          .append($('<td>').attr('class', 'boton')
+            .append($('<button>').attr('class', 'borrar').attr('data-id', element.id).text('Borrar'))
           ));
       });
-    }).done(()=>{
+    }).done(() => {
       $('#cargando').hide()
       $('td button').on('click', function (event) {
         event.stopPropagation();  // Evitar que el clic se propague a elementos padres
@@ -21,7 +21,7 @@ $(function () {
       })
       mostrarDetalle();
       $('#detalle').hide();
-      
+
     });
   }
   function listarPorID(id) {
@@ -38,22 +38,28 @@ $(function () {
 
   }
   function borrarentrada(id) {
+
     $.ajax({
       url: `https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes/${id}`,
       type: 'DELETE',
-      success: () => console.log('Borrado')
+      success: function () { $('#resultado').text('Borrado con exito') },
+      error: () => $('#resultado').text('Error de borrado'),
+
     })
-    $('#detalle').hide();
+
+    setTimeout(() => { $('#resultado').text("") }, 5000);
+
+
 
   }
-  function vaciarCampos(){
+  function vaciarCampos() {
     $('#id').val('0');
-      $('#nombre').val('');
-      $('#apellidos').val('');
-      $('#edad').val('');
-      $('#direccion').val('');
-      $('#profesion').val('');
-      $('#correo').val('');
+    $('#nombre').val('');
+    $('#apellidos').val('');
+    $('#edad').val('');
+    $('#direccion').val('');
+    $('#profesion').val('');
+    $('#correo').val('');
   }
   function crear() {
     $('#botonCrear').on('click', () => {
@@ -65,23 +71,28 @@ $(function () {
     $('td').on('click', function (event) {
       listarPorID($(this).attr('data-id'))
     })
+    $('td.boton').off('click')
   }
   function grabarDatos(datos) {
+
     $.ajax({
       url: 'https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes/',
-      type: "POST", // Método HTTP
-      data: JSON.stringify(datos), // Envía el JSON plano
-      contentType: "application/json" // Especifica que el contenido es JSON  
+      type: "POST",
+      data: JSON.stringify(datos),
+      contentType: "application/json"
     }).then(
       (response) => {
-          console.log(response)
+        $('#resultado').text('Guardado con exito')
+        console.log(response)
       },
       (error) => {
-          
-          console.log(error.statusText)
+        $('#resultado').text('Error de guardado')
+        console.log(error.statusText)
       })
+    setTimeout(() => { $('#resultado').text("") }, 5000);
   }
   function modificar(id, datos) {
+
     $.ajax({
       url: `https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes/${id}`,
       type: "PUT", // Método HTTP
@@ -89,12 +100,14 @@ $(function () {
       contentType: "application/json" // Especifica que el contenido es JSON  
     }).then(
       (response) => {
-          console.log(response)
+        $('#resultado').text('Modificado con exito')
+        console.log(response)
       },
       (error) => {
-          
-          console.log(error.statusText)
+        $('#resultado').text('Error en la modificacion')
+        console.log(error)
       })
+    setTimeout(() => { $('#resultado').text("") }, 5000);
   }
   function guardar() {
     $('form').on('submit', (event) => {
@@ -115,7 +128,7 @@ $(function () {
         "profesion": profesion,
         "correo": correo
       }
-      if (id <= 0) {        
+      if (id <= 0) {
         grabarDatos(datos);
       } else {
         modificar(id, datos)
@@ -123,16 +136,17 @@ $(function () {
     })
   }
 
-  function refrescar(){
+  function refrescar() {
     $('#botonRefrescar').on('click', () => {
-      listar()      
+      listar()
       $('#detalle').hide();
       vaciarCampos();
     })
   }
+  $('#detalle').hide();
   refrescar()
   crear();
-  listar();  
+  listar();
   guardar()
 
 

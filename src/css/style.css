@@ -12,8 +12,16 @@ td:hover{
    background-color: rgb(70, 181, 255); 
 }
 td {
-    font-size: 25px;
+    font-size: 20px;
     padding-left: auto;
     width: auto;
     cursor: pointer;
+}
+.resultadoOperacion{
+    margin-top: 20px;
+}
+#resultado{
+    color: red;
+    font-weight: bold;
+    font-size: 25px;
 }
