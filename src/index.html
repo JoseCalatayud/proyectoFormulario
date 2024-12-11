@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../node_modules/jquery/dist/jquery.js"></script>
     <script src="./javascript/index.js"></script>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         table,table *{
             border: 1px solid black;
@@ -15,10 +16,14 @@
 <body>
     <div class="maestro">
         <h1>Maestro</h1>
+        <button id="botonRefrescar">Refrescar</button>
+        <button id="botonCrear">Nuevo</button>
         <table>
             <thead>
                 <th>Nombre</th>
                 <th>Apellidos</th>
+                <th>Accion</th>
+                <!--Buscar toast de jquery para el teme de mientras cargas la informacion-->
             </thead>
             <tbody>
 
@@ -26,9 +31,9 @@
         </table>
     </div>
     <h1>Detalle</h1>
-    <div class="detalle">
-        <form>
-            
+    <div id="detalle">
+        <form method="post">
+            <input type="hidden" id="id" value="">
             <label for="nombre">Nombre: </label><br>
             <input type="text" id="nombre" name="nombre"><br>
             <label for="apellidos">Apellidos: </label><br>
@@ -41,6 +46,7 @@
             <input type="text" id="profesion" name="profesion"><br>
             <label for="correo">Correo: </label><br>
             <input type="text" id="correo" name="correo"><br>
+            <button type="submit">Guardar</button>
         </form>
     </div>
 </body>

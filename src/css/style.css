@@ -1,0 +1,19 @@
+.maestro{
+    
+    margin: 1auto;
+}
+
+
+table,table *{
+    
+    border: 1px solid black;
+}
+td:hover{
+   background-color: rgb(70, 181, 255); 
+}
+td {
+    font-size: 25px;
+    padding-left: auto;
+    width: auto;
+    cursor: pointer;
+}
