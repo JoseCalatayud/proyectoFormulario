@@ -38,7 +38,7 @@ $(function () {
 
   }
   function borrarentrada(id) {
-
+    $('#detalle').hide();
     $.ajax({
       url: `https://my-json-server.typicode.com/josecalatayud/proyectoFormulario/solicitudes/${id}`,
       type: 'DELETE',
@@ -47,7 +47,9 @@ $(function () {
 
     })
 
-    setTimeout(() => { $('#resultado').text("") }, 5000);
+    setTimeout(() => { 
+      $('#resultado').text("")      
+     }, 5000);
 
 
 
